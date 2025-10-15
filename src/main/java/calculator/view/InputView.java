@@ -33,9 +33,8 @@ public class InputView {
             String delimiter = matcher.group(1);
             String numbers = matcher.group(2);
             return splitNumbers(numbers, Pattern.quote(delimiter));
-        } else {
-            throw new IllegalArgumentException("잘못된 입력 형식입니다.");
         }
+        throw new IllegalArgumentException("잘못된 입력 형식입니다.");
     }
 
     private static List<Integer> splitNumbers(String numbers, String delimiterRegex) {
