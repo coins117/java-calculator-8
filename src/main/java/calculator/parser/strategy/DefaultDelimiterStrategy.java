@@ -8,7 +8,7 @@ public class DefaultDelimiterStrategy implements DelimiterStrategy {
 
     @Override
     public boolean supports(String input) {
-        return !input.startsWith("//");
+        return !input.startsWith(CUSTOM_DELIMITER_PREFIX);
     }
 
     @Override
